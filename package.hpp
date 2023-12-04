@@ -5,4 +5,13 @@
 #ifndef SERWERYAIR_PACKAGE_HPP
 #define SERWERYAIR_PACKAGE_HPP
 
+class Package {
+public:
+Package
+private:
+
+    unsigned int ElementID_;
+
+};
+
 #endif //SERWERYAIR_PACKAGE_HPP
