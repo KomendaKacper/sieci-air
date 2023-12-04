@@ -10,9 +10,11 @@ include_directories(
 set(SOURCE_FILES
         src/package.cpp
         src/storage_types.cpp
-        )
+        include/types.hpp
+        include/storage_types.hpp
+)
 
-add_executable(Serwery-air ${SOURCE_FILES} main.cpp include)
+add_executable(Serwery-air ${SOURCE_FILES} main.cpp)
 
 
 target_compile_definitions(Serwery-air PUBLIC EXERCISE_ID=<ID_ćwiczenia>)
