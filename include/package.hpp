@@ -31,7 +31,9 @@ extern unsigned int counter;
 
 class Package {
 public:
-    Package() : ElementID_() {}
+    Package
+
+    Package(unsigned int element_id) : ElementID_(element_id) {}
 private:
 
     unsigned int ElementID_;
