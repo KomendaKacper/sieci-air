@@ -1,13 +1,23 @@
-//
-// Created by Fujitsu on 04.12.2023.
-//
+#include <cstdlib>
 
 #ifndef SERWERYAIR_PACKAGE_HPP
 #define SERWERYAIR_PACKAGE_HPP
 
+class assigned_IDs {
+public:
+    assigned_IDs() = default;
+    ~assigned_IDs() = default;
+
+private:
+    static int counter_;
+    static std::set<int> set_;
+};
+
+extern int counter;
+
 class Package {
 public:
-Package
+    Package() : ElementID_() {}
 private:
 
     unsigned int ElementID_;
