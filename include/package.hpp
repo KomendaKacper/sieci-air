@@ -1,4 +1,5 @@
 #include <cstdlib>
+#include <set>
 
 #ifndef SERWERYAIR_PACKAGE_HPP
 #define SERWERYAIR_PACKAGE_HPP
@@ -10,10 +11,23 @@ public:
 
 private:
     static int counter_;
-    static std::set<int> set_;
+    static std::set<unsigned int> set_;
 };
 
-extern int counter;
+
+class freed_IDs {
+public:
+    freed_IDs() = default;
+    ~freed_IDs() = default;
+
+private:
+    static int counter_;
+    static std::set<unsigned int> set_;
+};
+
+
+extern unsigned int counter;
+
 
 class Package {
 public:
