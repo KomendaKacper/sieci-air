@@ -12,7 +12,7 @@ set(SOURCE_FILES
         src/storage_types.cpp
         )
 
-add_executable(Serwery-air ${SOURCE_FILES} main.cpp)
+add_executable(Serwery-air ${SOURCE_FILES} main.cpp include)
 
 
 target_compile_definitions(Serwery-air PUBLIC EXERCISE_ID=<ID_ćwiczenia>)
