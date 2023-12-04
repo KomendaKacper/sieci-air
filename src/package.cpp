@@ -1,7 +1,11 @@
-//
-// Created by Fujitsu on 04.12.2023.
-//
-
 #include "package.hpp"
 
 
+unsigned int assigned_IDs::counter_ = 1;
+std::set<unsigned int> assigned_IDs::set_;
+
+
+unsigned int freed_IDs::counter_ = 1;
+std::set<unsigned int> freed_IDs::set_;
+
+unsigned int counter = 1;
