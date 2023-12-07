@@ -17,6 +17,19 @@ Package::Package() {
     assigned_IDs.insert(ElementID_);
 }
 
+Package &Package::operator=(Package &&package)  noexcept {
+    if(this == &package)
+        return *this;
+
+
+    assigned_IDs.erase(this -> ElementID_);
+    freed_IDs.insert(this -> ElementID_);
+
+    this -> ElementID_ = package.ElementID_;
+    assigned_IDs.insert(this -> ElementID_);
+
+    return *this;
+}
 
 Package::~Package() {
 

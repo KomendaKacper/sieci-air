@@ -10,7 +10,11 @@ class Package {
 public:
     Package();
 
-    Package(ElementID element_id) : ElementID_(element_id) {}
+    Package(ElementID element_id) : ElementID_(element_id) { assigned_IDs.insert(ElementID_); }
+
+    Package(Package &&package) : ElementID_(package.ElementID_) {}
+
+    Package &operator=(Package &&package) noexcept ;
 
     ElementID get_id() const { return ElementID_; }
 
