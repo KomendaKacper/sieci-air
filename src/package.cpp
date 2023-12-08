@@ -4,14 +4,18 @@ std::set<ElementID> Package::assigned_IDs = {};
 std::set<ElementID> Package::freed_IDs = {};
 
 Package::Package() {
-    if (assigned_IDs.empty() && freed_IDs.empty()) {
+
+    if(freed_IDs.empty() and assigned_IDs.empty()){
         ElementID_ = 1;
-    } else if (!freed_IDs.empty()) {
+
+    }else if(!freed_IDs.empty()){
         ElementID_ = *freed_IDs.begin();
-        freed_IDs.erase(*freed_IDs.begin());
-    } else if (!assigned_IDs.empty()) {
+        freed_IDs.erase(freed_IDs.begin());
+
+    }else {
         ElementID_ = *assigned_IDs.end() + 1;
     }
+
     assigned_IDs.insert(ElementID_);
 }
 
