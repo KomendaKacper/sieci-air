@@ -15,19 +15,11 @@ enum class PackageQueueType{
     LIFO
 };
 
-PackageQueueType x ;
-
-switch (x){
-    case PackageQueueType::FIFO:
-        break;
-    case PackageQueueType::LIFO:
-        break;
-    default:
-        return NULL
-}
 
 
-template<typename T>
+
+template<typename T>;
+
 class IPackageStockpile {
 public:
     using const_iterator = typename T::const_iterator;
