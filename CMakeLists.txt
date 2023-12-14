@@ -10,13 +10,13 @@ include_directories(
 set(SOURCE_FILES
         src/package.cpp
         src/storage_types.cpp
+        src/nodes.cpp
+        src/helpers.cpp
         include/types.hpp
         include/storage_types.hpp
-        src/nodes.cpp
         include/nodes.hpp
-        src/helpers.cpp
         include/helpers.hpp
-)
+        )
 
 add_executable(Serwery-air ${SOURCE_FILES} main.cpp)
 
