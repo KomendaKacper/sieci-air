@@ -18,7 +18,7 @@ public:
 
     ElementID get_id() const { return ElementID_; }
 
-    ~Package();
+    virtual ~Package();
 
 private:
 
