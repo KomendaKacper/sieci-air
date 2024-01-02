@@ -3,8 +3,7 @@
 //
 
 #include "helpers.hpp"
-
-#include <cstdlib>
+#include <sstream>
 #include <random>
 
 
@@ -17,3 +16,29 @@ double default_probability_generator() {
 }
 
 std::function<double()> probability_generator = default_probability_generator;
+
+std::vector<std::string> splitString(const std::string& line, char c)
+{
+    std::istringstream ss(line);
+
+    std::string token;
+    std::vector<std::string> ret;
+    while(getline(ss, token, c))
+        ret.push_back(token);
+
+    return ret;
+}
+
+std::array<char, 2> whitespaceChars = {'\r', '\0'};
+std::string removeWhitespaces(std::string data)
+{
+    for(size_t i = 0;i<data.size();i++)
+        for(char whitespaceChar : whitespaceChars)
+            if(data[i] == whitespaceChar)
+            {
+                data.erase(i--);
+                break;
+            }
+
+    return data;
+}

@@ -65,6 +65,7 @@ public:
     PackageQueueType get_queue_type() const override { return queue_type_; }
 
     ~PackageQueue() override = default;
+
 private:
     std::list<Package> queue_;
     PackageQueueType queue_type_;

@@ -14,12 +14,30 @@
 
 #include <list>
 #include <algorithm>
+#include <fstream>
+#include <vector>
+#include <sstream>
+#include <iostream>
+#include <vector>
 
 enum NodeColor
 {
     UNVISITED,
     VISITED,
     VERIFIED
+};
+
+enum ElementType
+{
+    LOADING_RAMP,
+    WORKER,
+    STOREHOUSE,
+    LINK
+};
+
+struct ParsedLineData {
+    ElementType element_type;
+    std::map<std::string, std::string> parameters;
 };
 
 
@@ -148,6 +166,10 @@ private:
     NodeCollection<Storehouse> storehouses_;
 
 };
+
+Factory load_factory_structure(std::istream& is);
+
+void save_factory_structure(Factory& f, std::ostream& os);
 
 
 
