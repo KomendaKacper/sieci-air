@@ -138,6 +138,8 @@ public:
 
     IPackageStockpile::const_iterator end() const override { return q_->end(); }
 
+    const std::optional<Package>& get_processing_buffer() const { return bufor_; }
+
 #if (defined EXERCISE_ID && EXERCISE_ID != EXERCISE_ID_NODES)
     ReceiverType get_receiver_type() const override { return ReceiverType::WORKER; }
 #endif

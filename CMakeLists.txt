@@ -13,11 +13,15 @@ set(SOURCE_FILES
         src/nodes.cpp
         src/helpers.cpp
         src/factory.cpp
+        src/reports.cpp
+        src/simulation.cpp
         include/types.hpp
         include/storage_types.hpp
         include/nodes.hpp
         include/helpers.hpp
         include/factory.hpp
+        include/reports.hpp
+        include/simulation.hpp
         googletest-master
         )
 
